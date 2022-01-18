@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+// * { outline: 1px solid red; }
+
+/* ********************** */
+/* *******VARIABLE******* */
+/* ********************** */
+
+$blue: hsl(246, 80%, 60%);
+$lightorange: hsl(15, 100%, 70%);
+$softblue: hsl(195, 74%, 62%);
+$lightred: hsl(348, 100%, 68%);
+$limegreen: hsl(145, 58%, 55%);
+$violet: hsl(264, 64%, 52%);
+$softorange: hsl(43, 84%, 65%);
+
+$verydarkblue: hsl(226, 43%, 10%);
+$darkblue: hsl(235, 46%, 20%);
+$desaturatedblue: hsl(235, 45%, 61%);
+$paleblue: hsl(236, 100%, 87%);
+
+/* ******************
+*****FUNCTION********
+********************* */
+$myColor: (
+  "blue": $blue,
+  "lightorange": $lightorange,
+  "softblue": $softblue,
+  "lightred": $lightred,
+  "limegreen": $limegreen,
+  "violet": $violet,
+  "softorange": $softorange,
+  "verydarkblue": $verydarkblue,
+  "darkblue": $darkblue,
+  "desaturatedblue": $desaturatedblue,
+  "paleblue": $paleblue,
+);
+
+@function set-color($color) {
+  @if (lightness($color) > 70) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@each $var, $color in $myColor {
+  .bg-#{$var} {
+    background-color: $color;
+  }
+  .text-#{$var} {
+    color: $color;
+  }
+  .btn-fill-#{$var} {
+    background-color: $color;
+    border: 1.2px solid $color;
+    color: set-color($color);
+    &:hover {
+      background-color: transparent;
+      color: $color;
+      border: 1.2px solid $color;
+    }
+  }
+  .btn-nofill-#{$var} {
+    background-color: transparent;
+    border: 1.2px solid $color;
+    color: $color;
+    &:hover {
+      background-color: $color;
+      border: 1.2px solid $color;
+      color: set-color($color);
+    }
+  }
+}
+
+@for $i from -1 through 9 {
+  .z-#{$i} {
+    z-index: $i !important;
+  }
+}
+@for $i from 4 through 9 {
+  .rounded-#{$i} {
+    border-radius: $i * 2px;
+  }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@each $bp, $val in $grid-breakpoints {
+  @for $i from 25 through 100 {
+    @if ($i % 25 == 0) {
+      .w-#{$bp}-#{$i} {
+        width: 100%;
+      }
+      @media (min-width: $val) {
+        .w-#{$bp}-#{$i} {
+          width: 1% * $i !important;
+        }
+      }
+    }
+  }
+}
+
+.menu a {
+  opacity: .6;
+}
+.menu a:hover {
+  opacity: .8;
+  color: $desaturatedblue;
+}
+.menu a.active {
+  opacity: 1;
+  color: white !important;
+}
+p.previous {
+  font-size: calc(.8rem + .5vw) ;
+}
