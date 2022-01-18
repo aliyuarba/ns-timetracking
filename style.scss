@@ -10,9 +10,15 @@ body {
   box-sizing: border-box;
 }
 
-/* ********************** */
+/****** SET DEFAULT ****** */
+.btn:focus {
+  box-shadow: none;
+}
+.btn:active {
+  opacity: 0.5;
+}
+
 /* *******VARIABLE******* */
-/* ********************** */
 
 $blue: hsl(246, 80%, 60%);
 $lightorange: hsl(15, 100%, 70%);
@@ -21,15 +27,11 @@ $lightred: hsl(348, 100%, 68%);
 $limegreen: hsl(145, 58%, 55%);
 $violet: hsl(264, 64%, 52%);
 $softorange: hsl(43, 84%, 65%);
-
 $verydarkblue: hsl(226, 43%, 10%);
 $darkblue: hsl(235, 46%, 20%);
 $desaturatedblue: hsl(235, 45%, 61%);
 $paleblue: hsl(236, 100%, 87%);
 
-/* ******************
-*****FUNCTION********
-********************* */
 $myColor: (
   "blue": $blue,
   "lightorange": $lightorange,
@@ -44,8 +46,19 @@ $myColor: (
   "paleblue": $paleblue,
 );
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+/* ****** FUNCTION ******* */
+
 @function set-color($color) {
-  @if (lightness($color) > 70) {
+  @if (lightness($color) > 50) {
     @return #000;
   } @else {
     @return #fff;
@@ -86,23 +99,27 @@ $myColor: (
     z-index: $i !important;
   }
 }
+
 @for $i from 4 through 9 {
   .rounded-#{$i} {
     border-radius: $i * 2px;
   }
+  .rounded-top-#{$i} {
+    border-radius: $i * 2px $i * 2px 0 0;
+  }
+  .rounded-bottom-#{$i} {
+    border-radius: 0 0 $i * 2px $i * 2px;
+  }
+  .rounded-left-#{$i} {
+    border-radius: $i * 2px 0 0 $i * 2px;
+  }
+  .rounded-right-#{$i} {
+    border-radius: 0 $i * 2px $i * 2px 0;
+  }
 }
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
-
 @each $bp, $val in $grid-breakpoints {
-  @for $i from 25 through 100 {
+  @for $i from 25 through 200 {
     @if ($i % 25 == 0) {
       .w-#{$bp}-#{$i} {
         width: 100%;

@@ -18,31 +18,25 @@ for (let i = 0; i < data.length; i++) {
 
 const el = (index) => {
   return `
-      <div class="col-md-4 col-sm-6">
+  <div class="col-md-4 col-sm-6">
 
-        <div class="tile${index + 1} bg-${data[index].bg} rounded-5 mb-3">
-          <div class="overflow-hidden position-relative" style="height: 3rem;">
-            <img src="${
-              data[index].img
-            }" alt="" class="position-absolute top-0 end-0">
-          </div>
+    <div class="tile${index + 1} bg-${data[index].bg} rounded-5 mb-3">
+      <div class="overflow-hidden position-relative" style="height: 3rem;">
+        <img src="${ data[index].img }" alt="" class="position-absolute top-0 end-0">
+      </div>
 
-          <div class="inner-tile bg-darkblue text-light p-4 rounded-5">
-            <div class="d-flex justify-content-between mb-3">
-              <span>${data[index].title}</span><strong>. . .</strong>
-            </div>
-            <div class='d-flex flex-sm-column'>
-              <h1 class="current display-4 mb-0 mt-auto">${
-                data[index].timeframes.weekly.current
-              }hrs</h1>
-              <p class='previous mb-auto mt-auto ms-auto ms-sm-0 text-desaturatedblue'>Last week - ${
-                data[index].timeframes.weekly.previous
-              }hrs</p>
-            </div>
-          </div>
+      <div class="inner-tile bg-darkblue text-light p-4 rounded-4">
+        <div class="d-flex justify-content-between mb-3">
+          <span>${data[index].title}</span><strong>. . .</strong>
+        </div>
+        <div class='d-flex flex-sm-column'>
+          <h1 class="current display-4 mb-0 mt-auto">${ data[index].timeframes.weekly.current }hrs</h1>
+          <p class='previous mb-auto mt-auto ms-auto ms-sm-0 text-desaturatedblue'>Last week - ${ data[index].timeframes.weekly.previous }hrs</p>
         </div>
       </div>
-      `;
+    </div>
+  </div>
+  `;
 };
 
 const target = document.getElementById("tiles");

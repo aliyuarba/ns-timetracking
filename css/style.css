@@ -9,12 +9,18 @@ body {
           box-sizing: border-box;
 }
 
-/* ********************** */
+/****** SET DEFAULT ****** */
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
 /* *******VARIABLE******* */
-/* ********************** */
-/* ******************
-*****FUNCTION********
-********************* */
+/* ****** FUNCTION ******* */
 .bg-blue {
   background-color: #5847eb;
 }
@@ -26,7 +32,7 @@ body {
 .btn-fill-blue {
   background-color: #5847eb;
   border: 1.2px solid #5847eb;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-blue:hover {
@@ -44,7 +50,7 @@ body {
 .btn-nofill-blue:hover {
   background-color: #5847eb;
   border: 1.2px solid #5847eb;
-  color: #fff;
+  color: #000;
 }
 
 .bg-lightorange {
@@ -58,7 +64,7 @@ body {
 .btn-fill-lightorange {
   background-color: #ff8c66;
   border: 1.2px solid #ff8c66;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-lightorange:hover {
@@ -76,7 +82,7 @@ body {
 .btn-nofill-lightorange:hover {
   background-color: #ff8c66;
   border: 1.2px solid #ff8c66;
-  color: #fff;
+  color: #000;
 }
 
 .bg-softblue {
@@ -90,7 +96,7 @@ body {
 .btn-fill-softblue {
   background-color: #56c2e6;
   border: 1.2px solid #56c2e6;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-softblue:hover {
@@ -108,7 +114,7 @@ body {
 .btn-nofill-softblue:hover {
   background-color: #56c2e6;
   border: 1.2px solid #56c2e6;
-  color: #fff;
+  color: #000;
 }
 
 .bg-lightred {
@@ -122,7 +128,7 @@ body {
 .btn-fill-lightred {
   background-color: #ff5c7c;
   border: 1.2px solid #ff5c7c;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-lightred:hover {
@@ -140,7 +146,7 @@ body {
 .btn-nofill-lightred:hover {
   background-color: #ff5c7c;
   border: 1.2px solid #ff5c7c;
-  color: #fff;
+  color: #000;
 }
 
 .bg-limegreen {
@@ -154,7 +160,7 @@ body {
 .btn-fill-limegreen {
   background-color: #4acf81;
   border: 1.2px solid #4acf81;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-limegreen:hover {
@@ -172,7 +178,7 @@ body {
 .btn-nofill-limegreen:hover {
   background-color: #4acf81;
   border: 1.2px solid #4acf81;
-  color: #fff;
+  color: #000;
 }
 
 .bg-violet {
@@ -186,7 +192,7 @@ body {
 .btn-fill-violet {
   background-color: #7536d3;
   border: 1.2px solid #7536d3;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-violet:hover {
@@ -204,7 +210,7 @@ body {
 .btn-nofill-violet:hover {
   background-color: #7536d3;
   border: 1.2px solid #7536d3;
-  color: #fff;
+  color: #000;
 }
 
 .bg-softorange {
@@ -218,7 +224,7 @@ body {
 .btn-fill-softorange {
   background-color: #f1c65b;
   border: 1.2px solid #f1c65b;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-softorange:hover {
@@ -236,7 +242,7 @@ body {
 .btn-nofill-softorange:hover {
   background-color: #f1c65b;
   border: 1.2px solid #f1c65b;
-  color: #fff;
+  color: #000;
 }
 
 .bg-verydarkblue {
@@ -314,7 +320,7 @@ body {
 .btn-fill-desaturatedblue {
   background-color: #6f76c8;
   border: 1.2px solid #6f76c8;
-  color: #fff;
+  color: #000;
 }
 
 .btn-fill-desaturatedblue:hover {
@@ -332,7 +338,7 @@ body {
 .btn-nofill-desaturatedblue:hover {
   background-color: #6f76c8;
   border: 1.2px solid #6f76c8;
-  color: #fff;
+  color: #000;
 }
 
 .bg-paleblue {
@@ -415,24 +421,120 @@ body {
   border-radius: 8px;
 }
 
+.rounded-top-4 {
+  border-radius: 8px 8px 0 0;
+}
+
+.rounded-bottom-4 {
+  border-radius: 0 0 8px 8px;
+}
+
+.rounded-left-4 {
+  border-radius: 8px 0 0 8px;
+}
+
+.rounded-right-4 {
+  border-radius: 0 8px 8px 0;
+}
+
 .rounded-5 {
   border-radius: 10px;
+}
+
+.rounded-top-5 {
+  border-radius: 10px 10px 0 0;
+}
+
+.rounded-bottom-5 {
+  border-radius: 0 0 10px 10px;
+}
+
+.rounded-left-5 {
+  border-radius: 10px 0 0 10px;
+}
+
+.rounded-right-5 {
+  border-radius: 0 10px 10px 0;
 }
 
 .rounded-6 {
   border-radius: 12px;
 }
 
+.rounded-top-6 {
+  border-radius: 12px 12px 0 0;
+}
+
+.rounded-bottom-6 {
+  border-radius: 0 0 12px 12px;
+}
+
+.rounded-left-6 {
+  border-radius: 12px 0 0 12px;
+}
+
+.rounded-right-6 {
+  border-radius: 0 12px 12px 0;
+}
+
 .rounded-7 {
   border-radius: 14px;
+}
+
+.rounded-top-7 {
+  border-radius: 14px 14px 0 0;
+}
+
+.rounded-bottom-7 {
+  border-radius: 0 0 14px 14px;
+}
+
+.rounded-left-7 {
+  border-radius: 14px 0 0 14px;
+}
+
+.rounded-right-7 {
+  border-radius: 0 14px 14px 0;
 }
 
 .rounded-8 {
   border-radius: 16px;
 }
 
+.rounded-top-8 {
+  border-radius: 16px 16px 0 0;
+}
+
+.rounded-bottom-8 {
+  border-radius: 0 0 16px 16px;
+}
+
+.rounded-left-8 {
+  border-radius: 16px 0 0 16px;
+}
+
+.rounded-right-8 {
+  border-radius: 0 16px 16px 0;
+}
+
 .rounded-9 {
   border-radius: 18px;
+}
+
+.rounded-top-9 {
+  border-radius: 18px 18px 0 0;
+}
+
+.rounded-bottom-9 {
+  border-radius: 0 0 18px 18px;
+}
+
+.rounded-left-9 {
+  border-radius: 18px 0 0 18px;
+}
+
+.rounded-right-9 {
+  border-radius: 0 18px 18px 0;
 }
 
 .w-xs-25 {
@@ -472,6 +574,46 @@ body {
 @media (min-width: 0) {
   .w-xs-100 {
     width: 100% !important;
+  }
+}
+
+.w-xs-125 {
+  width: 100%;
+}
+
+@media (min-width: 0) {
+  .w-xs-125 {
+    width: 125% !important;
+  }
+}
+
+.w-xs-150 {
+  width: 100%;
+}
+
+@media (min-width: 0) {
+  .w-xs-150 {
+    width: 150% !important;
+  }
+}
+
+.w-xs-175 {
+  width: 100%;
+}
+
+@media (min-width: 0) {
+  .w-xs-175 {
+    width: 175% !important;
+  }
+}
+
+.w-xs-200 {
+  width: 100%;
+}
+
+@media (min-width: 0) {
+  .w-xs-200 {
+    width: 200% !important;
   }
 }
 
@@ -515,6 +657,46 @@ body {
   }
 }
 
+.w-sm-125 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .w-sm-125 {
+    width: 125% !important;
+  }
+}
+
+.w-sm-150 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .w-sm-150 {
+    width: 150% !important;
+  }
+}
+
+.w-sm-175 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .w-sm-175 {
+    width: 175% !important;
+  }
+}
+
+.w-sm-200 {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .w-sm-200 {
+    width: 200% !important;
+  }
+}
+
 .w-md-25 {
   width: 100%;
 }
@@ -552,6 +734,46 @@ body {
 @media (min-width: 768px) {
   .w-md-100 {
     width: 100% !important;
+  }
+}
+
+.w-md-125 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-md-125 {
+    width: 125% !important;
+  }
+}
+
+.w-md-150 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-md-150 {
+    width: 150% !important;
+  }
+}
+
+.w-md-175 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-md-175 {
+    width: 175% !important;
+  }
+}
+
+.w-md-200 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-md-200 {
+    width: 200% !important;
   }
 }
 
@@ -595,6 +817,46 @@ body {
   }
 }
 
+.w-lg-125 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .w-lg-125 {
+    width: 125% !important;
+  }
+}
+
+.w-lg-150 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .w-lg-150 {
+    width: 150% !important;
+  }
+}
+
+.w-lg-175 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .w-lg-175 {
+    width: 175% !important;
+  }
+}
+
+.w-lg-200 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .w-lg-200 {
+    width: 200% !important;
+  }
+}
+
 .w-xl-25 {
   width: 100%;
 }
@@ -635,6 +897,46 @@ body {
   }
 }
 
+.w-xl-125 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .w-xl-125 {
+    width: 125% !important;
+  }
+}
+
+.w-xl-150 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .w-xl-150 {
+    width: 150% !important;
+  }
+}
+
+.w-xl-175 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .w-xl-175 {
+    width: 175% !important;
+  }
+}
+
+.w-xl-200 {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .w-xl-200 {
+    width: 200% !important;
+  }
+}
+
 .w-xxl-25 {
   width: 100%;
 }
@@ -672,6 +974,46 @@ body {
 @media (min-width: 1400px) {
   .w-xxl-100 {
     width: 100% !important;
+  }
+}
+
+.w-xxl-125 {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-125 {
+    width: 125% !important;
+  }
+}
+
+.w-xxl-150 {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-150 {
+    width: 150% !important;
+  }
+}
+
+.w-xxl-175 {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-175 {
+    width: 175% !important;
+  }
+}
+
+.w-xxl-200 {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .w-xxl-200 {
+    width: 200% !important;
   }
 }
 
