@@ -32,7 +32,7 @@ const el = (index) => {
               <span>${data[index].title}</span><strong>. . .</strong>
             </div>
             <div class='d-flex flex-lg-column'>
-              <h1 class="current display-2 mb-0 mt-auto">${
+              <h1 class="current display-4 mb-0 mt-auto">${
                 data[index].timeframes.weekly.current
               }hrs</h1>
               <p class='previous mb-auto mt-auto ms-auto ms-lg-0 text-desaturatedblue'>Last week - ${
